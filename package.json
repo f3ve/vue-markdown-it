@@ -1,0 +1,52 @@
+{
+  "name": "@f3ve/vue-markdown-it",
+  "version": "0.0.0",
+  "description": "Vue 3 markdown-it plugin",
+  "main": "./dist/vue-markdown-it.umd.js",
+  "module": "./dist/vue-markdown-it.mjs",
+  "types": "./dist/vue-markdown-it.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-markdown-it.js",
+      "require": "./dist/vue-markdown-it.umd.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "vue",
+    "vue 3",
+    "markdown",
+    "markdown-it",
+    "vue markdown",
+    "vue 3 markdown",
+    "vue-markdown-it",
+    "@f3ve/vue-markdown-it"
+  ],
+  "author": "f3ve",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/tsconfig": "^0.4.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "generate-changelog": "^1.8.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.16.6",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.3"
+  }
+}
