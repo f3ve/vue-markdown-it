@@ -10,6 +10,9 @@
     ".": {
       "import": "./dist/vue-markdown-it.js",
       "require": "./dist/vue-markdown-it.umd.cjs"
+    },
+    "./components": {
+      "import": "./dist/src/components"
     }
   },
   "scripts": {
@@ -28,10 +31,13 @@
   "author": "f3ve",
   "license": "MIT",
   "dependencies": {
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^13.0.1"
+  },
+  "peerDependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@types/markdown-it": "^13.0.1",
     "@types/node": "^20.5.7",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -47,6 +53,7 @@
     "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.16.6",
     "vite": "^4.4.9",
-    "vite-plugin-dts": "^3.5.3"
+    "vite-plugin-dts": "^3.5.3",
+    "vue": "^3.3.4"
   }
 }
