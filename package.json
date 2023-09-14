@@ -16,7 +16,8 @@
     }
   },
   "repository": {
-    "url": "https://github.com/f3ve/vue-markdown-it/tree/main"
+    "type": "git",
+    "url": "https://github.com/f3ve/vue-markdown-it"
   },
   "scripts": {
     "build": "vite build",
