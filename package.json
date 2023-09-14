@@ -1,7 +1,7 @@
 {
   "name": "@f3ve/vue-markdown-it",
   "version": "0.0.0",
-  "description": "Vue 3 markdown-it plugin",
+  "description": "Vue 3 markdown-it component",
   "main": "./dist/vue-markdown-it.umd.js",
   "module": "./dist/vue-markdown-it.mjs",
   "types": "./dist/vue-markdown-it.d.ts",
