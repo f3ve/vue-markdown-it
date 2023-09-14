@@ -6,6 +6,9 @@
   "module": "./dist/vue-markdown-it.mjs",
   "types": "./dist/vue-markdown-it.d.ts",
   "type": "module",
+  "files": [
+    "./dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/vue-markdown-it.js",
