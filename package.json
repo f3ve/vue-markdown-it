@@ -19,7 +19,8 @@
     "url": "https://github.com/f3ve/vue-markdown-it/tree/main"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "keywords": [
     "vue",
@@ -47,6 +48,7 @@
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/tsconfig": "^0.4.0",
+    "conventional-changelog-cli": "^4.1.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
