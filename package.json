@@ -15,6 +15,9 @@
       "import": "./dist/src/components"
     }
   },
+  "repository": {
+    "url": "https://github.com/f3ve/vue-markdown-it/tree/main"
+  },
   "scripts": {
     "build": "vite build"
   },
