@@ -36,6 +36,5 @@ function toArray<T = any>(val: T) {
 </script>
 
 <template>
-  <!-- eslint-disable-next-line vue/no-v-html -->
   <div v-html="md.render(source)" :class="mdWrapperClass"></div>
 </template>
