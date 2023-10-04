@@ -147,8 +147,6 @@ app.use(VueMarkdownItPlugin);
 app.mount('#app');
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Using markdown-it Plugins
 
 You can add markdown-it plugins using the `plugin` prop. `plugin` expects an array of markdown-it plugins. If you want to configure the options of a plugin you can nest the plugin and its options in an array.
@@ -244,6 +242,7 @@ onMounted(async () => {
 </template>
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- ROADMAP -->
 
 ## Roadmap
