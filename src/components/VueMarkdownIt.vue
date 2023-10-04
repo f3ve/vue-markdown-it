@@ -7,19 +7,26 @@ const props = withDefaults(
     source: string;
     /**
      * Custom class name to apply to markdown container
+     * @default 'vue-md-it-wrapper'
      */
     mdWrapperClass?: string;
     plugins?: (
       | MarkdownIt.PluginSimple
       | [MarkdownIt.PluginSimple | MarkdownIt.PluginWithOptions<any>, any]
     )[];
+    preset?: MarkdownIt.PresetName;
+    options?: MarkdownIt.Options;
   }>(),
   {
     mdWrapperClass: 'vue-md-it-wrapper',
   },
 );
 
-const md = new MarkdownIt();
+const md = props.preset
+  ? new MarkdownIt(props.preset, props.options)
+  : props.options
+  ? new MarkdownIt(props.options)
+  : new MarkdownIt();
 
 if (props.plugins) registerPlugins();
 
@@ -36,5 +43,5 @@ function toArray<T = any>(val: T) {
 </script>
 
 <template>
-  <div v-html="md.render(source)" :class="mdWrapperClass"></div>
+  <div :class="mdWrapperClass" v-html="md.render(source)"></div>
 </template>
