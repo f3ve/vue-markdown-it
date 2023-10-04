@@ -126,7 +126,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <vue-markdown-it :source="post">
+  <vue-markdown-it :source="post" />
 </template>
 ```
 
@@ -170,11 +170,77 @@ onMounted(async () => {
 <template>
   <vue-markdown-it
     :source="post"
-    :plugins="[
-      myPlugin,
-      [myPluginWithOptions, {option1: true}]
-    ]"
-  >
+    :plugins="[myPlugin, [myPluginWithOptions, { option1: true }]]"
+  />
+</template>
+```
+
+### Using Markdown-it Options & Presets
+
+See [Markdown-it docs](https://markdown-it.github.io/markdown-it/#MarkdownIt.new) for more information
+
+#### Options
+
+```vue
+<script setup>
+import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
+
+const post = ref();
+const options = {
+  html: true,
+  linkify: true,
+};
+
+onMounted(async () => {
+  const res = await api.get('/post');
+  post.value = res.data;
+});
+</script>
+
+<template>
+  <vue-markdown-it :source="post" :options="options" />
+</template>
+```
+
+#### Presets
+
+```vue
+<script setup>
+import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
+
+const post = ref();
+
+onMounted(async () => {
+  const res = await api.get('/post');
+  post.value = res.data;
+});
+</script>
+
+<template>
+  <vue-markdown-it :source="post" preset="commonmark" />
+</template>
+```
+
+#### Using Presets and Options together
+
+```vue
+<script setup>
+import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
+
+const post = ref();
+const options = {
+  html: true,
+  linkify: true,
+};
+
+onMounted(async () => {
+  const res = await api.get('/post');
+  post.value = res.data;
+});
+</script>
+
+<template>
+  <vue-markdown-it :source="post" :options="options" preset="commonmark" />
 </template>
 ```
 
@@ -190,16 +256,7 @@ See the [open issues](https://github.com/f3ve/vue-markdown-it/issues) for a full
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+[See contributing guide](https://github.com/f3ve/.github/blob/main/CONTRIBUTING.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -207,7 +264,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the [MIT License](https://github.com/f3ve/vue-markdown-it/blob/main/LICENSE).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
