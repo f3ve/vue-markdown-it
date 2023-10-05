@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { resolve } from 'path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
@@ -21,6 +22,11 @@ export default defineConfig({
         },
       },
     },
+  },
+
+  test: {
+    globals: true,
+    environment: 'jsdom',
   },
 
   resolve: {

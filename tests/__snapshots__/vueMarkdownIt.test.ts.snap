@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Mount VueMarkdownIt 1`] = `
+"<div class=\\"vue-md-it-wrapper\\">
+  <h1>This is a test!</h1>
+  <pre><code>  Muffins are awesome
+</code></pre>
+</div>"
+`;
