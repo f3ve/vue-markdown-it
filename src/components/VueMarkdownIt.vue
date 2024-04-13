@@ -25,8 +25,8 @@ const props = withDefaults(
 const md = props.preset
   ? new MarkdownIt(props.preset, props.options)
   : props.options
-  ? new MarkdownIt(props.options)
-  : new MarkdownIt();
+    ? new MarkdownIt(props.options)
+    : new MarkdownIt();
 
 if (props.plugins) registerPlugins();
 
