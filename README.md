@@ -136,7 +136,7 @@ onMounted(async () => {
 #### In Regular `<script>` Syntax
 
 ```vue
-<script setup>
+<script>
 import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
 
 export default {
