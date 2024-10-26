@@ -113,7 +113,10 @@ npm i @f3ve/vue-markdown-it
 
 You can directly import the component in your SFC file.
 
+#### In [`<script setup>`](https://vuejs.org/api/sfc-script-setup.html#basic-syntax) Syntax
+
 ```vue
+<!-- Vue 3 setup script syntax -->
 <script setup>
 import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
 
@@ -123,6 +126,32 @@ onMounted(async () => {
   const res = await api.get('/post');
   post.value = res.data;
 });
+</script>
+
+<template>
+  <vue-markdown-it :source="post" />
+</template>
+```
+
+#### In Regular `<script>` Syntax
+
+```vue
+<script setup>
+import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
+
+export default {
+  components: {
+    VueMarkdownIt
+  }
+  setup() {
+    const post = ref();
+
+    onMounted(async () => {
+      const res = await api.get('/post');
+      post.value = res.data;
+    });
+  }
+}
 </script>
 
 <template>
@@ -178,6 +207,8 @@ onMounted(async () => {
 See [Markdown-it docs](https://markdown-it.github.io/markdown-it/#MarkdownIt.new) for more information
 
 #### Options
+
+> _Note: I'm using Vue [script setup](https://vuejs.org/api/sfc-script-setup.html#basic-syntax) syntax in these examples. If you're not using script setup make sure to [register the component](https://vuejs.org/guide/components/registration.html#local-registration) before using._
 
 ```vue
 <script setup>

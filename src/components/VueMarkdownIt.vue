@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script lang="ts" setup>
 import MarkdownIt from 'markdown-it';
 
