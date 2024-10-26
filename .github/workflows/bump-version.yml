@@ -55,6 +55,11 @@ jobs:
           git config user.name 'f3ve'
           git config user.email '${{ secrets.MY_EMAIL }}'
 
+      - name: cleaning up git
+        run: |
+          git add .
+          git commit -m "chore: preparing for release"
+
       - name: bump version
         run: npm version ${{ github.event.inputs.version }}
 
